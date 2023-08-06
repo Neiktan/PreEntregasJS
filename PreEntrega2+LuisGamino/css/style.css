@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.body-agendar .body-comida .body-index .body-juegos .body-contacto{
+    padding: 1.8em;
+}
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #181818;
+    color: white;
+}
+
+.logo{ /*Header*/
+    height: 50px;
+}
+
+
+
+
+.comida-logo, .bebidas-logo, .aperativos-logo{
+    background-color: 0 0 20px 0 rgb(255, 255, 255, .3);
+    padding: 50px;
+    display: flex;
+    text-align: center;
+}
+
+.comida-text, .aperativos-text, .bebidas-text{
+    margin: auto;
+}
+
+.margin-comida{
+    margin: 20px;
+}
+
+.grid-pizza, .grid-hamburguesas, .grid-alitas, .grid-helados, .grid-sodas, .grid-alcohol{
+    box-shadow: 0 0 20px 0 rgb(255, 255, 255, .3);
+    margin-bottom: 20px;
+    width: 100%;
+    justify-items: center;
+    }
+
+.grid-alcohol-img, .grid-pizza-img, .grid-hamburguesas-img, .grid-alitas-img, .grid-helados-img, .grid-sodas-img{
+    margin: 10px 0;
+    width: 280px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.grid-pizza{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "grid-pizza-title grid-pizza-title"
+        "grid-pizza-img grid-pizza-content"
+    ;
+    .grid-pizza-title{
+        grid-area: grid-pizza-title;
+        text-align: center;
+        padding: 40px;
+    }
+    .grid-pizza-img{
+        grid-area: grid-pizza-img;
+    }
+    .grid-pizza-content{
+        grid-area: grid-pizza-content;
+    }
+    .grid-pizza-content-all{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.grid-hamburguesas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "grid-hamburguesas-title grid-hamburguesas-title"
+        "grid-hamburguesas-img grid-hamburguesas-content"
+    ;
+    .grid-hamburguesas-title{
+        grid-area: grid-hamburguesas-title;
+        text-align: center;
+        padding: 40px;
+    }
+    .grid-hamburguesas-img{
+        grid-area: grid-hamburguesas-img;
+    }
+    .grid-hamburguesas-content{
+        grid-area: grid-hamburguesas-content;
+    }
+}
+
+.grid-alitas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "grid-alitas-title grid-alitas-title"
+        "grid-alitas-img grid-alitas-content"
+    ;
+    .grid-alitas-title{
+        grid-area: grid-alitas-title;
+        text-align: center;
+        padding: 40px;
+    }
+    .grid-alitas-img{
+        grid-area: grid-alitas-img;
+    }
+    .grid-alitas-content{
+        grid-area: grid-alitas-content;
+    }
+}
+
+.grid-helados{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "grid-helados-title grid-helados-title"
+        "grid-helados-img grid-helados-cont"
+    ;
+    .grid-helados-title{
+        grid-area: grid-helados-title;
+        text-align: center;
+        padding: 40px;
+    }
+    .grid-helados-img{
+        grid-area: grid-helados-img;
+    }
+    .grid-helados-cont{
+        grid-area: grid-helados-cont;
+    }
+}
+
+.grid-sodas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "grid-sodas-title grid-sodas-title"
+        "grid-sodas-img grid-sodas-content"
+    ;
+    .grid-sodas-title{
+        grid-area: grid-sodas-title;
+        text-align: center;
+        padding: 40px;
+    }
+    .grid-sodas-img{
+        grid-area: grid-sodas-img;
+    }
+    .grid-sodas-content{
+        grid-area: grid-sodas-content;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.grid-alcohol{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "grid-alcohol-title grid-alcohol-title"
+        "grid-alcohol-img grid-alcohol-content"
+    ;
+    .grid-alcohol-title{
+        grid-area: grid-alcohol-title;
+        text-align: center;
+        padding: 40px;
+    }
+    .grid-alcohol-img{
+        grid-area: grid-alcohol-img;
+    }
+    .grid-alcohol-content{
+        grid-area: grid-alcohol-content;
+    }
+}
+
+
+
+/* @media IMPORTS 
+@media (max-width: $celular) {
+    .grid-alitas-title{
+        margin: 10px;
+    }
+}
+
+@media (max-width: $tablet) { //Esta manera esta bien aunque tambien se lo puedo quitar pero debo ponerle lo mismo en $celular//
+    .grid-alcohol, .grid-sodas, .grid-helados, .grid-alitas, .grid-hamburguesas, .grid-pizza{
+        width: 100%;
+        height: auto;
+        @include flex-row-wrap;
+        justify-content: space-around;
+    }
+}
+*/

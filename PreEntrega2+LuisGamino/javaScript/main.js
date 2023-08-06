@@ -33,8 +33,15 @@ console.log(productosOrdenados)
 
 
 const hola = prompt("Que comida deseas ordenar?")
-    if(hola == productos){
-        console.log = true
+    if(hola == producto1.nombre){
+        console.log (true)
+        const cantidadAlitas = prompt("Que cantidad deseas?")
+
+            if (cantidadAlitas == 6 || cantidadAlitas == 10 || cantidadAlitas == 14 || cantidadAlitas == 18){
+                alert(`tu(s) ${hola} de ${cantidadAlitas} piezas`)
+//agregar un IVA//
+            }
     }else{
-        console.log = false
+        console.log(false)
+        alert("lo siento pero no encontramos lo que deseas")
     }

@@ -1,55 +1,9 @@
-const pedido = prompt("Que comida deseas ordenar?")
-
-    if(pedido == producto1.nombre){//alitas    
-        console.log(productos.find((producto) => producto1.nombre === pedido))
-        const cantidadAlitas = prompt("Que cantidad deseas?")
-
-            if (cantidadAlitas == 6 || cantidadAlitas == 10 || cantidadAlitas == 14 || cantidadAlitas == 18){
-                alert(`tu(s) ${pedido} de ${cantidadAlitas} piezas, el precio es de ${producto1.precio} dolares, gracias por su compra`)
-                console.log(`id ${producto1.id}`)
-            }else{
-                alert("Error: Por favor de de poner la cantidad de lo que tenemos en el menu")
-            }
-
-    }else if(pedido == producto2.nombre){//hamburguesa
-        console.log(productos.find((producto) => producto2.nombre === pedido))
-        const cantidadHamburguesas = Number(prompt("Cuantas hamburguesas deseas"))
-
-            if(cantidadHamburguesas <= 5){
-                alert(`tu(s) ${cantidadHamburguesas} ${pedido} estaran listas pronto, sera ${cantidadHamburguesas * producto2.precio}dolares, gracias por su compra`)
-                console.log(`id: ${producto2.id}`)
-            }else{
-                alert("Lo sientto, son demasiadas hamburguesas")
-            }
-
-    }else if(pedido == producto3.nombre){//bebida
-        console.log(productos.find((producto) => producto3.nombre === pedido))
-        const cantidadBebida = prompt("Cauntas bebidas deseas")
-
-        alert(`tu(s) ${cantidadBebida} bebidas se haran pronto, serian ${cantidadBebida * producto3.precio} dolares, gracias por su compra`)
-        console.log(`id ${producto3.id}`)
-
-    }else if(pedido == producto4.nombre){//helado
-        console.log(productos.find((producto) => producto4.nombre === pedido))
-        const cantidadHelado = prompt("Cuantos helados?")
-
-        alert(`tu(s) ${cantidadHelado} ${producto4.name} estara lista pronto, serian ${cantidadHelado * producto4.precio}`)
-        console.log(`id: ${producto5.id}`)
-
-    }else if(pedido == producto5.nombre){//pizza
-        console.log(productos.find((producto) => producto5.nombre === pedido))
-        const tamanioPizza = prompt("De que tamanio? (chica, mediano, grande)")
-
-            if(tamanioPizza == "chica" || tamanioPizza == "mediano" || tamanioPizza == "grande"){
-                console.log(`pizza ${tamanioPizza}`) 
-
-                const cantidadPizza = prompt("cantida de pizza")
-                alert(`tu(s) ${cantidadPizza} pizzas ${tamanioPizza} estaran listas pronto, sera ${cantidadPizza * producto5.precio} dolares, muchas gracias por su compra`)
-                console.log(`id: ${producto5.id}`)
-            }
-
+const productosOrdenados = productos.slice().sort(( a, b ) => {
+    if (a.nombre > b.nombre){
+        return 1;
+    }else if (a.nombre < b.nombre){
+        return -1;
     }else{
-        console.log(false)
-        alert("lo siento pero no encontramos lo que deseas")
+    return 0;
     }
-
+})

@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #181818;
+    color: white;
+
+}
+
+h2{
+    color: red;
+}
+
+b{
+    color: green;
+}
+
+
+.container-cards {   /*editado, antes article*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+
